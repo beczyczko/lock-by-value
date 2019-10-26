@@ -1,0 +1,119 @@
+ #### Lack of lock ####
+ 2019-10-26 13:14:42,944 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc2, 3
+ 2019-10-26 13:14:42,945 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc2, 5
+ 2019-10-26 13:14:42,938 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc0, 02
+ 2019-10-26 13:14:42,949 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc2, 4
+ 2019-10-26 13:14:42,956 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc2, 6
+ 2019-10-26 13:14:42,959 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc0, 01
+ 2019-10-26 13:14:42,965 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc1, 2
+ 2019-10-26 13:14:42,968 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc0, 0
+ 2019-10-26 13:14:42,975 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc2, 3
+ 2019-10-26 13:14:42,977 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc2, 5
+ 2019-10-26 13:14:42,978 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc0, 02
+ 2019-10-26 13:14:42,979 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc2, 5
+ 2019-10-26 13:14:42,980 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc0, 02
+ 2019-10-26 13:14:42,981 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc2, 3
+ 2019-10-26 13:14:42,992 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc2, 4
+ 2019-10-26 13:14:42,993 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc2, 6
+ 2019-10-26 13:14:42,994 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc2, 4
+ 2019-10-26 13:14:42,995 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc2, 6
+ 2019-10-26 13:14:43,006 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc0, 01
+ 2019-10-26 13:14:43,009 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc0, 01
+ 2019-10-26 13:14:43,010 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc1, 2
+ 2019-10-26 13:14:43,014 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc1, 2
+ 2019-10-26 13:14:43,021 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc0, 0
+ 2019-10-26 13:14:43,025 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc0, 0
+
+ #### LockByValue 1 try ####
+ 2019-10-26 13:12:21,409 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc2, 3
+ 2019-10-26 13:12:21,409 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc0, 02
+ 2019-10-26 13:12:21,409 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc1, 2
+ 2019-10-26 13:12:21,421 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc2, 3
+ 2019-10-26 13:12:21,422 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc0, 02
+ 2019-10-26 13:12:21,423 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc2, 3
+ 2019-10-26 13:12:21,424 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc0, 02
+ 2019-10-26 13:12:21,425 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc1, 2
+ 2019-10-26 13:12:21,426 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc0, 0
+ 2019-10-26 13:12:21,428 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc0, 0
+ 2019-10-26 13:12:21,430 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc0, 0
+ 2019-10-26 13:12:21,438 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc1, 2
+ 2019-10-26 13:12:21,439 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc2, 4
+ 2019-10-26 13:12:21,442 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc2, 4
+ 2019-10-26 13:12:21,448 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc2, 4
+ 2019-10-26 13:12:21,450 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc2, 6
+ 2019-10-26 13:12:21,452 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc2, 6
+ 2019-10-26 13:12:21,455 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc2, 6
+ 2019-10-26 13:12:21,457 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc2, 5
+ 2019-10-26 13:12:21,464 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc2, 5
+ 2019-10-26 13:12:21,468 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc2, 5
+ 2019-10-26 13:12:21,473 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc0, 01
+ 2019-10-26 13:12:21,476 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc0, 01
+ 2019-10-26 13:12:21,479 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc0, 01
+ 
+ #### LockByValue 2 try ####
+ 2019-10-26 13:22:28,100 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc0, 0
+ 2019-10-26 13:22:28,100 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc2, 4
+ 2019-10-26 13:22:28,100 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc1, 2
+ 2019-10-26 13:22:28,146 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc2, 4
+ 2019-10-26 13:22:28,152 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc1, 2
+ 2019-10-26 13:22:28,158 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc2, 4
+ 2019-10-26 13:22:28,166 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc1, 2
+ 2019-10-26 13:22:28,171 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc2, 3
+ 2019-10-26 13:22:28,206 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc2, 3
+ 2019-10-26 13:22:28,210 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc0, 0
+ 2019-10-26 13:22:28,215 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc2, 3
+ 2019-10-26 13:22:28,226 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc0, 0
+ 2019-10-26 13:22:28,240 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc2, 6
+ 2019-10-26 13:22:28,259 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc2, 6
+ 2019-10-26 13:22:28,264 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc0, 01
+ 2019-10-26 13:22:28,269 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc2, 6
+ 2019-10-26 13:22:28,274 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc0, 01
+ 2019-10-26 13:22:28,280 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc2, 5
+ 2019-10-26 13:22:28,291 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc2, 5
+ 2019-10-26 13:22:28,302 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc2, 5
+ 2019-10-26 13:22:28,319 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc0, 01
+ 2019-10-26 13:22:28,330 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc0, 02
+ 2019-10-26 13:22:28,340 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc0, 02
+ 2019-10-26 13:22:28,351 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc0, 02
+ 
+ #### Using lock() ####
+ 2019-10-26 13:42:16,350 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc0, 02
+ 2019-10-26 13:42:16,376 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc0, 02
+ 2019-10-26 13:42:16,377 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc0, 02
+ 2019-10-26 13:42:16,378 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc2, 5
+ 2019-10-26 13:42:16,379 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc2, 5
+ 2019-10-26 13:42:16,381 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc2, 5
+ 2019-10-26 13:42:16,382 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc2, 4
+ 2019-10-26 13:42:16,384 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc2, 4
+ 2019-10-26 13:42:16,387 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc2, 4
+ 2019-10-26 13:42:16,390 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc2, 6
+ 2019-10-26 13:42:16,393 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc2, 6
+ 2019-10-26 13:42:16,396 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc2, 6
+ 2019-10-26 13:42:16,405 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc0, 01
+ 2019-10-26 13:42:16,408 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc0, 01
+ 2019-10-26 13:42:16,409 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc0, 01
+ 2019-10-26 13:42:16,411 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc1, 2
+ 2019-10-26 13:42:16,413 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc1, 2
+ 2019-10-26 13:42:16,415 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc1, 2
+ 2019-10-26 13:42:16,420 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc2, 3
+ 2019-10-26 13:42:16,424 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc2, 3
+ 2019-10-26 13:42:16,427 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc2, 3
+ 2019-10-26 13:42:16,431 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc0, 0
+ 2019-10-26 13:42:16,434 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc0, 0
+ 2019-10-26 13:42:16,437 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc0, 0
+2019-10-26 14:10:11,029 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc0, 02
+ 2019-10-26 14:10:11,040 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc0, 02
+ 2019-10-26 14:10:11,042 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc0, 02
+ 2019-10-26 14:10:24,021 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc0, 02
+ 2019-10-26 14:10:24,025 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc0, 02
+ 2019-10-26 14:10:24,027 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc0, 02
+ 2019-10-26 14:10:24,038 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc2, 5
+ 2019-10-26 14:10:24,040 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc2, 5
+ 2019-10-26 14:10:24,042 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc2, 5
+ 2019-10-26 14:10:24,044 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc2, 6
+ 2019-10-26 14:10:24,046 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc2, 6
+ 2019-10-26 14:10:24,048 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc2, 6
+ 2019-10-26 14:10:24,055 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Enter endpoint: ccc0, 01
+ 2019-10-26 14:10:24,057 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Processing: ccc0, 01
+ 2019-10-26 14:10:24,060 FATAL RaceCondition.Controllers.ValuesController.? [?] - MESSAGE: Leave endpoint: ccc0, 01
+ 
